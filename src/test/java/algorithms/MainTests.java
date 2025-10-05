@@ -1,6 +1,9 @@
 package algorithms;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.*;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -44,5 +47,31 @@ public class MainTests {
             if (left < heap.length) assertTrue(heap[i] >= heap[left]);
             if (right < heap.length) assertTrue(heap[i] >= heap[right]);
         }
+    }
+
+    @Test
+    void testSortedArray() {
+        int[] arr = {1,2,3,4,5};
+        int[] expected = {1,2,3,4,5};
+        SelectionSort.sort(arr);
+        assertArrayEquals(expected, arr);
+    }
+
+    @Test
+    void testReverseSortedArray() {
+        int[] arr = {5,4,3,2,1};
+        int[] expected = {1,2,3,4,5};
+        HeapSort.sort(arr);
+        assertArrayEquals(expected, arr);
+    }
+
+    @Test
+    void randomPropertyTest() {
+        Random rnd = new Random();
+        int[] arr = rnd.ints(100, 0, 1000).toArray();
+        int[] copy = Arrays.copyOf(arr, arr.length);
+        SelectionSort.sort(copy);
+        for (int i = 0; i < copy.length - 1; i++)
+            assertTrue(copy[i] <= copy[i+1]);
     }
 }
