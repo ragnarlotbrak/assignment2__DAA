@@ -1,0 +1,22 @@
+──────────────────────────────────────────────────────────────
+Timestamp           : 2025-10-05 20:54:57
+Algorithm           : SelectionSort
+Array Size          : 16515
+Comparisons         : 136,364,355
+Swaps               : 16,500
+Accesses            : 272,761,710
+Execution Time (ms) : 228,290
+Memory Used (KB)    : 3,296
+──────────────────────────────────────────────────────────────
+
+──────────────────────────────────────────────────────────────
+Timestamp           : 2025-10-05 20:55:23
+Algorithm           : SelectionSort
+Array Size          : 455
+Comparisons         : 103,285
+Swaps               : 452
+Accesses            : 207,474
+Execution Time (ms) : 3,363
+Memory Used (KB)    : 3,232
+──────────────────────────────────────────────────────────────
+
