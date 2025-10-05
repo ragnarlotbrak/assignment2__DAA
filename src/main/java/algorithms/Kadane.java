@@ -1,5 +1,7 @@
 package algorithms;
 
+import metrics.*;
+
 public class Kadane {
 
     public static Performance run(int[] arr) {
@@ -8,7 +10,7 @@ public class Kadane {
 
         int maxSoFar = arr[0];
         int maxEndingHere = arr[0];
-        int start = 0, end = 0, s = 0;
+        int start = 0, end = 0, tempStart = 0;
 
         for (int i = 1; i < arr.length; i++) {
             perf.comparisons.increment();
@@ -16,15 +18,14 @@ public class Kadane {
 
             if (arr[i] > maxEndingHere + arr[i]) {
                 maxEndingHere = arr[i];
-                s = i;
+                tempStart = i;
             } else {
-                maxEndingHere += arr[i];
+                maxEndingHere = maxEndingHere + arr[i];
             }
 
-            perf.comparisons.increment();
             if (maxEndingHere > maxSoFar) {
                 maxSoFar = maxEndingHere;
-                start = s;
+                start = tempStart;
                 end = i;
             }
         }
@@ -32,5 +33,17 @@ public class Kadane {
         perf.stop();
         System.out.println("Max subarray sum = " + maxSoFar + " (from index " + start + " to " + end + ")");
         return perf;
+    }
+
+    public static int maxSubarraySum(int[] arr) {
+        int maxSoFar = arr[0];
+        int maxEndingHere = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            maxEndingHere = Math.max(arr[i], maxEndingHere + arr[i]);
+            maxSoFar = Math.max(maxSoFar, maxEndingHere);
+        }
+
+        return maxSoFar;
     }
 }
