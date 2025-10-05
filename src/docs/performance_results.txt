@@ -20,3 +20,25 @@ Execution Time (ms) : 3,363
 Memory Used (KB)    : 3,232
 ──────────────────────────────────────────────────────────────
 
+──────────────────────────────────────────────────────────────
+Timestamp           : 2025-10-05 21:08:18
+Algorithm           : SelectionSort
+Array Size          : 200
+Comparisons         : 19,900
+Swaps               : 193
+Accesses            : 40,186
+Execution Time (ms) : 1,058
+Memory Used (KB)    : 3,235
+──────────────────────────────────────────────────────────────
+
+──────────────────────────────────────────────────────────────
+Timestamp           : 2025-10-05 21:08:57
+Algorithm           : SelectionSort
+Array Size          : 245
+Comparisons         : 29,890
+Swaps               : 239
+Accesses            : 60,258
+Execution Time (ms) : 1,451
+Memory Used (KB)    : 3,232
+──────────────────────────────────────────────────────────────
+
