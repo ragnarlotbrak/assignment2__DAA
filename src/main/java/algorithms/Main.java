@@ -1,6 +1,8 @@
 package algorithms;
 
 import java.util.*;
+
+import cli.BenchmarkRunner;
 import metrics.CSVWriter;
 import util.*;
 
@@ -8,6 +10,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         try {
+            System.out.print("Choose mode (normal / benchmark): ");
+            String mode = in.nextLine().trim().toLowerCase();
+
+            if (mode.equals("benchmark")) {
+                BenchmarkRunner.runBenchmarks(new int[]{1000, 5000, 10000});
+                return;
+            }
+
             System.out.print("Choose algorithm (selection / heap / kadane / maxheap): ");
             String algo = in.nextLine().trim().toLowerCase();
 
