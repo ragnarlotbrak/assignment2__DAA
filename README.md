@@ -1,0 +1,1 @@
+All Java programs are easy to run. Simply execute the main class and choose the desired mode (normal or benchmark) following the prompts. To run tests, open and execute the MainTests file located in src/test/java/algorithms/. Input sizes and algorithm selection are intuitive, and results are displayed in the console and saved to files automatically.
